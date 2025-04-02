@@ -9,7 +9,7 @@ export default function TopicInput() {
         if (topic.trim() === '') return;
 
         try {
-            const res = await axios.post('http://localhost:8000/generate-question', {
+            const res = await axios.post('https://lecture-ai-backend.onrender.com/generate-question', {
                 topic,
             });
             setResponse(res.data.response);
